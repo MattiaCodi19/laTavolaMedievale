@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Tavola Medievale</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <p class="sottotitolo">✦ Un viaggio tra i sapori del passato ✦</p>
+        <h1>La Tavola Medievale</h1>
+        <p>Dal pane dei contadini ai banchetti dei nobili</p>
+        <nav>
+            <a href="#storia">La tavola</a>
+            <a href="#legumi">I legumi</a>
+            <a href="#cucina">La cucina</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="introduzione">
+            <p class="etichetta">BENVENUTI NEL MEDIOEVO</p>
+            <h2>Il cibo racconta la storia</h2>
+            <p>
+                Nel Medioevo, ciò che si mangiava dipendeva dalla ricchezza,
+                dal territorio e dalla stagione. Scopri cosa arrivava
+                sulle tavole di nobili e contadini!
+            </p>
+            <a class="bottone" href="#storia">Inizia il viaggio ↓</a>
+        </section>
+
+        <section id="storia">
+            <h2>Due tavole, due mondi</h2>
+            <p class="descrizione">La società medievale era molto diversa anche a tavola.</p>
+
+            <div class="griglia">
+                <article class="scheda">
+                    <div class="simbolo">👑</div>
+                    <h3>La tavola dei ricchi</h3>
+                    <p>Carni, selvaggina, pesce pregiato, spezie e pane di farina raffinata erano presenti nei banchetti più ricchi.</p>
+                    <span class="etichetta">PRESTIGIO E ABBONDANZA</span>
+                </article>
+
+                <article class="scheda">
+                    <div class="simbolo">🌾</div>
+                    <h3>La tavola dei poveri</h3>
+                    <p>Pane scuro, zuppe di cereali, fave, piselli, lenticchie e verdure erano alimenti importanti nella dieta quotidiana.</p>
+                    <span class="etichetta">SEMPLICITÀ E STAGIONI</span>
+                </article>
+            </div>
+            <p class="nota">Le abitudini variavano secondo epoca, regione, religione e disponibilità degli alimenti.</p>
+        </section>
+
+        <section id="legumi" class="sezione-scura">
+            <p class="etichetta">IL TESORO DEI CONTADINI</p>
+            <h2>I legumi nel Medioevo</h2>
+            <p>
+                Ceci, fave, piselli e lenticchie fornivano proteine vegetali
+                e contribuivano a rendere sostanziosi i pasti. Erano spesso
+                utilizzati in zuppe e preparazioni semplici.
+            </p>
+
+            <div class="griglia legumi">
+                <article>
+                    <div class="simbolo">🫘</div>
+                    <h3>Fave</h3>
+                    <p>Un alimento importante in molte comunità rurali.</p>
+                </article>
+                <article>
+                    <div class="simbolo">🥣</div>
+                    <h3>Lenticchie</h3>
+                    <p>Adatte a zuppe nutrienti e facili da preparare.</p>
+                </article>
+                <article>
+                    <div class="simbolo">🌱</div>
+                    <h3>Ceci</h3>
+                    <p>Utilizzati in diverse tradizioni alimentari medievali.</p>
+                </article>
+            </div>
+
+            <div class="curiosita">
+                <h3>📜 Una curiosità sull'hummus</h3>
+                <p>
+                    L'hummus moderno è una crema di ceci tipica della cucina
+                    mediorientale. Non va confuso con una ricetta medievale
+                    europea: è però un ottimo spunto per scoprire la storia
+                    dei ceci e delle preparazioni a base di legumi.
+                </p>
+            </div>
+        </section>
+
+        <section id="cucina">
+            <p class="etichetta">METTITI ALLA PROVA</p>
+            <h2>La cucina del castello</h2>
+            <p class="descrizione">Scegli un alimento e scopri qualche informazione.</p>
+
+            <input type="text" id="ricerca" placeholder="Cerca un alimento...">
+
+            <div class="filtri">
+                <button class="filtro attivo" data-tipo="tutti">Tutti</button>
+                <button class="filtro" data-tipo="ricchi">Ricchi</button>
+                <button class="filtro" data-tipo="poveri">Poveri</button>
+            </div>
+
+            <div id="alimenti" class="griglia"></div>
+
+            <div class="ricetta">
+    <h3>🥄 Prepara la tua crema di ceci</h3>
+    <p>Seleziona gli ingredienti fondamentali per la ricetta tradizionale dell'hummus:</p>
+
+    <!-- Contenitore delle opzioni per allinearle meglio -->
+    <div class="ingredienti-grid">
+        <label class="opzione-ingrediente">
+            <input type="checkbox" class="ingrediente" value="Ceci"> 
+            <span>Ceci cotti</span>
+        </label>
+        <label class="opzione-ingrediente">
+            <input type="checkbox" class="ingrediente" value="Olio"> 
+            <span>Olio d'oliva</span>
+        </label>
+        <label class="opzione-ingrediente">
+            <input type="checkbox" class="ingrediente" value="Limone"> 
+            <span>Succo di limone</span>
+        </label>
+        <label class="opzione-ingrediente">
+            <input type="checkbox" class="ingrediente" value="Tahina"> 
+            <span>Tahina (crema di sesamo)</span>
+        </label>
+    </div>
+
+    <button class="bottone" id="prepara">Frulla gli ingredienti! ✨</button>
+    
+    <!-- Messaggio di risultato interattivo -->
+    <p id="risultato" aria-live="polite"></p>
+</div>
+        </section>
+
+        <section class="appunti">
+            <h2>Il nostro spazio medievale</h2>
+            <p>Inserisci qui le tue informazioni, curiosità o i risultati della ricerca scolastica.</p>
+            <textarea id="appunti" placeholder="Scrivi qui i tuoi appunti..."></textarea>
+            <button class="bottone" id="salva">Salva gli appunti</button>
+            <p id="messaggio" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>✦ La Tavola Medievale ✦</p>
+        <p>Progetto scolastico di <span contenteditable="true">Luca Marzullo</span> · <span contenteditable="true">3ITCA B</span></p>
+    </footer>
+
+</body>
+</html>
