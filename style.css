@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f3e8cf;
+    color: #392719;
+    font-family: Georgia, serif;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    background: #392719;
+    color: #f3e8cf;
+    padding: 35px 15px 20px;
+    border-bottom: 5px solid #c59b50;
+}
+
+h1 {
+    color: #e4bd70;
+    font-size: 2.7rem;
+    margin: 5px;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+h3 {
+    margin-bottom: 8px;
+}
+
+.sottotitolo, .etichetta {
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.etichetta {
+    color: #a46b27;
+}
+
+nav {
+    margin-top: 25px;
+}
+
+nav a {
+    color: #f3e8cf;
+    text-decoration: none;
+    margin: 0 12px;
+}
+
+nav a:hover {
+    color: #e4bd70;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    padding: 35px 0;
+}
+
+.introduzione {
+    text-align: center;
+    padding: 60px 15px;
+}
+
+.introduzione p:not(.etichetta) {
+    max-width: 600px;
+    margin: 15px auto 25px;
+}
+
+.bottone {
+    display: inline-block;
+    background: #7c4227;
+    color: white;
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.bottone:hover {
+    background: #9a6238;
+}
+
+.descrizione, .nota {
+    text-align: center;
+}
+
+.nota {
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-top: 25px;
+}
+
+.griglia {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.scheda {
+    background: #fff8e9;
+    border: 1px solid #d4b778;
+    border-radius: 8px;
+    padding: 22px;
+    box-shadow: 0 4px 10px #39271912;
+}
+
+.simbolo {
+    font-size: 2rem;
+}
+
+.scheda .etichetta {
+    font-size: 0.7rem;
+}
+
+.sezione-scura {
+    background: #392719;
+    color: #f3e8cf;
+    padding: 35px 25px;
+    border: 2px solid #c59b50;
+    border-radius: 10px;
+}
+
+.sezione-scura h2, .sezione-scura h3 {
+    color: #e4bd70;
+}
+
+.legumi {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.curiosita {
+    margin-top: 25px;
+    padding: 18px;
+    border: 1px dashed #c59b50;
+    border-radius: 8px;
+}
+
+#ricerca, textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bca16d;
+    border-radius: 5px;
+    background: #fff8e9;
+    font: inherit;
+}
+
+.filtri {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.filtro {
+    background: #e1cfaa;
+    border: 1px solid #bca16d;
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.filtro.attivo {
+    background: #7c4227;
+    color: white;
+}
+
+.alimento {
+    background: #fff8e9;
+    border-left: 4px solid #c59b50;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.ricetta, .appunti {
+    background: #e9d8b6;
+    padding: 22px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.ricetta label {
+    display: block;
+    margin: 12px 0;
+}
+
+.ricetta input {
+    accent-color: #7c4227;
+}
+
+#prepara, #salva {
+    margin-top: 10px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#risultato, #messaggio {
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    background: #392719;
+    color: #f3e8cf;
+    padding: 20px;
+    border-top: 4px solid #c59b50;
+}
+
+footer span {
+    color: #e4bd70;
+    text-decoration: underline;
+    cursor: text;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .griglia, .legumi {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 15px;
+    }
+}
